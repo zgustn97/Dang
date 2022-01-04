@@ -1,11 +1,13 @@
 package com.example.makerenew
 
 import android.content.ContentValues.TAG
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import com.google.firebase.FirebaseException
 import com.google.firebase.FirebaseTooManyRequestsException
 import com.google.firebase.auth.*
@@ -36,24 +38,45 @@ class Signup : AppCompatActivity() {
         var storedVerificationId = ""
         var resendToken : PhoneAuthProvider.ForceResendingToken
 
+//        fun signInWithPhoneAuthCredential(credential: PhoneAuthCredential) {
+//            auth.signInWithCredential(credential)
+//                .addOnCompleteListener(this@Signup) { task ->
+//                    if (task.isSuccessful) {
+//                        // Sign in success, update UI with the signed-in user's information
+//                        Log.d(TAG, "signInWithCredential:success")
+//
+//                        val user = task.result?.user
+//                    } else {
+//                        // Sign in failed, display a message and update the UI
+//                        Log.w(TAG, "signInWithCredential:failure", task.exception)
+//                        if (task.exception is FirebaseAuthInvalidCredentialsException) {
+//                            // The verification code entered was invalid
+//                        }
+//                        // Update UI
+//                    }
+//                }
+//        }
         fun signInWithPhoneAuthCredential(credential: PhoneAuthCredential) {
-            auth.signInWithCredential(credential)
-                .addOnCompleteListener(this@Signup) { task ->
+            auth.createUserWithEmailAndPassword("+82"+et_phone.text.toString()+"@user.com", et_passwd.text.toString())
+                .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
                         // Sign in success, update UI with the signed-in user's information
-                        Log.d(TAG, "signInWithCredential:success")
-
-                        val user = task.result?.user
+                        Log.d(TAG, "createUserWithEmail:success")
+                        val user = auth.currentUser
+//                        updateUI(user)
                     } else {
-                        // Sign in failed, display a message and update the UI
-                        Log.w(TAG, "signInWithCredential:failure", task.exception)
-                        if (task.exception is FirebaseAuthInvalidCredentialsException) {
-                            // The verification code entered was invalid
-                        }
-                        // Update UI
+                        // If sign in fails, display a message to the user.
+                        Log.w(TAG, "createUserWithEmail:failure", task.exception)
+                        Toast.makeText(
+                            baseContext, "Authentication failed.",
+                            Toast.LENGTH_SHORT
+                        ).show()
+//                        updateUI(null)
                     }
                 }
-        }
+        } // 전화번호를 비밀번호와 연동하기 위해서 이메일 형식으로 포멧 변환함
+
+
         var callbacks = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
 
 
@@ -135,7 +158,10 @@ class Signup : AppCompatActivity() {
         }
 
 
-
+//        btn_signup.setOnClickListener(){
+//            passwd = et_passwd.text.toString()
+//
+//        }
 
     }
 }
