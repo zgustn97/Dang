@@ -4,6 +4,8 @@ import android.content.ContentValues.TAG
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
@@ -28,7 +30,7 @@ class Signup : AppCompatActivity() {
         val et_phone = findViewById<EditText>(R.id.signupPhoneNumber)
         val et_passwd = findViewById<EditText>(R.id.singupPassword)
         val et_otp = findViewById<EditText>(R.id.singupOTP)
-        val btn_signup = findViewById<Button>(R.id.btn_signup)
+        val btn_signup = findViewById<Button>(R.id.siginupbutton)
         val btn_smsSent = findViewById<Button>(R.id.btn_SmsSent)
         val btn_verify = findViewById<Button>(R.id.btn_verify)
         var phone = ""
@@ -36,33 +38,64 @@ class Signup : AppCompatActivity() {
         var otp = ""
 
         var storedVerificationId = ""
-        var resendToken : PhoneAuthProvider.ForceResendingToken
+        var resendToken: PhoneAuthProvider.ForceResendingToken
 
-//        fun signInWithPhoneAuthCredential(credential: PhoneAuthCredential) {
-//            auth.signInWithCredential(credential)
-//                .addOnCompleteListener(this@Signup) { task ->
-//                    if (task.isSuccessful) {
-//                        // Sign in success, update UI with the signed-in user's information
-//                        Log.d(TAG, "signInWithCredential:success")
-//
-//                        val user = task.result?.user
-//                    } else {
-//                        // Sign in failed, display a message and update the UI
-//                        Log.w(TAG, "signInWithCredential:failure", task.exception)
-//                        if (task.exception is FirebaseAuthInvalidCredentialsException) {
-//                            // The verification code entered was invalid
-//                        }
-//                        // Update UI
-//                    }
-//                }
-//        }
-        fun signInWithPhoneAuthCredential(credential: PhoneAuthCredential) {
-            auth.createUserWithEmailAndPassword("+82"+et_phone.text.toString()+"@user.com", et_passwd.text.toString())
-                .addOnCompleteListener(this) { task ->
+
+        et_passwd.addTextChangedListener(object : TextWatcher{
+            override fun afterTextChanged(p0: Editable?) {
+
+            }
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+            }
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                    if(et_passwd.length() > 5){
+                        btn_signup.setEnabled(true)
+                    }
+            }
+        }) //pwssword가 6자 이상이어야 회원가입 버튼이 활성화 됨
+
+
+
+
+
+        fun verifyWithPhoneAuthCredential(credential: PhoneAuthCredential) {
+            auth.signInWithCredential(credential)
+                .addOnCompleteListener(this@Signup) { task ->
+                    if (task.isSuccessful) {
+                        // Sign in success, update UI with the signed-in user's information
+                        Log.d(TAG, "signInWithCredential:success")
+                            et_passwd.setEnabled(true)
+                        val user = Firebase.auth.currentUser!!
+
+                        user.delete()
+                            .addOnCompleteListener { task ->
+                                if (task.isSuccessful) {
+                                    Log.d(TAG, "User account deleted.")
+                                }
+                            }
+                    } else {
+                        // Sign in failed, display a message and update the UI
+                        Log.w(TAG, "signInWithCredential:failure", task.exception)
+                        if (task.exception is FirebaseAuthInvalidCredentialsException) {
+                            // The verification code entered was invalid
+                        }
+                        // Update UI
+                    }
+                }
+        } //번호 인증을 하고 인증이 되면 firebase에 사용자 등록을 함과 동시에 삭제함
+
+        fun signInWithPhoneAuthCredential() {
+            auth.createUserWithEmailAndPassword(
+                "+82" + et_phone.text.toString() + "@user.com",
+                et_passwd.text.toString()
+            )
+                .addOnCompleteListener(this@Signup) { task ->
                     if (task.isSuccessful) {
                         // Sign in success, update UI with the signed-in user's information
                         Log.d(TAG, "createUserWithEmail:success")
                         val user = auth.currentUser
+
 //                        updateUI(user)
                     } else {
                         // If sign in fails, display a message to the user.
@@ -80,7 +113,6 @@ class Signup : AppCompatActivity() {
         var callbacks = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
 
 
-
             override fun onVerificationCompleted(credential: PhoneAuthCredential) {
                 // This callback will be invoked in two situations:
                 // 1 - Instant verification. In some cases the phone number can be instantly
@@ -89,7 +121,8 @@ class Signup : AppCompatActivity() {
                 //     detect the incoming verification SMS and perform verification without
                 //     user action.
                 Log.d(TAG, "onVerificationCompleted:$credential")
-                signInWithPhoneAuthCredential(credential)
+                verifyWithPhoneAuthCredential(credential)
+//                btn_signup.setEnabled(true)
             }
 
             override fun onVerificationFailed(e: FirebaseException) {
@@ -121,47 +154,46 @@ class Signup : AppCompatActivity() {
                 resendToken = token
 
 
-
-
-
             }
 
 //                    val credential = PhoneAuthProvider.getCredential(storedVerificationId!!, et_otp.text.toString())
 
 
-
-
-
-
         }
 
-        btn_smsSent.setOnClickListener(){
+        btn_smsSent.setOnClickListener() {
+            et_phone.setEnabled(false)
             val options = PhoneAuthOptions.newBuilder(auth)
-                .setPhoneNumber("+82"+et_phone.text.toString()) //국가 번호 +82 를 해줬음
+                .setPhoneNumber("+82" + et_phone.text.toString()) //국가 번호 +82 를 해줬음
                 .setTimeout(60L, TimeUnit.SECONDS)
                 .setActivity(this)
                 .setCallbacks(callbacks)
 
-                            // OnVerificationStateChangedCallbacks
+                // OnVerificationStateChangedCallbacks
                 .build()
             PhoneAuthProvider.verifyPhoneNumber(options)
+            btn_verify.setEnabled(true)
+        }
+
+        fun verifyPhoneNumberWithCode() {
+            var credential =
+                PhoneAuthProvider.getCredential(storedVerificationId, et_otp.text.toString())
+
+            verifyWithPhoneAuthCredential(credential)
 
         }
 
-        fun verifyPhoneNumberWithCode(){
-            var credential = PhoneAuthProvider.getCredential(storedVerificationId, et_otp.text.toString())
-            signInWithPhoneAuthCredential(credential)
-        }
-
-        btn_verify.setOnClickListener(){
+        
+        btn_verify.setOnClickListener() {
             verifyPhoneNumberWithCode()
         }
 
 
-//        btn_signup.setOnClickListener(){
+        btn_signup.setOnClickListener() {
 //            passwd = et_passwd.text.toString()
-//
-//        }
+            signInWithPhoneAuthCredential()
+
+    }
 
     }
 }
