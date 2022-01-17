@@ -41,6 +41,10 @@ class Signup : AppCompatActivity() {
         var resendToken: PhoneAuthProvider.ForceResendingToken
 
 
+
+
+
+
         et_passwd.addTextChangedListener(object : TextWatcher{
             override fun afterTextChanged(p0: Editable?) {
 
@@ -183,7 +187,7 @@ class Signup : AppCompatActivity() {
 
         }
 
-        
+
         btn_verify.setOnClickListener() {
             verifyPhoneNumberWithCode()
         }

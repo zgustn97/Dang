@@ -12,6 +12,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
+
 class Login_activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,6 +51,8 @@ class Login_activity : AppCompatActivity() {
                         Log.d(TAG, "로그인 성공")
                         Log.d(TAG, ""+auth.currentUser)
                         val user = auth.currentUser
+                        val intent = Intent(this, Glucose::class.java)
+                        startActivity(intent)
 //                        updateUI(user)
                     } else {
                         // If sign in fails, display a message to the user.

@@ -7,4 +7,5 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "makerenew"
-include ':app'
+include ':app', 'miband-sdk-kotiln'
+include ':miband-sdk-kotlin'

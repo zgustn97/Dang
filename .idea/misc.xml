@@ -3,13 +3,28 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/makerenew/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.14479166666666668" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/makerenew/app/src/main/res/drawable/edge.xml" value="0.165625" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/makerenew/app/src/main/res/drawable/ic___glu.xml" value="0.14479166666666668" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/makerenew/app/src/main/res/drawable/ic_add_1.xml" value="0.14479166666666668" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/makerenew/app/src/main/res/drawable/ic_outline_close_24.xml" value="0.165625" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/makerenew/app/src/main/res/drawable/some_id.xml" value="0.3764102564102564" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/makerenew/app/src/main/res/layout-v31/activity_glucose.xml" value="0.1096311475409836" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/makerenew/app/src/main/res/layout-v31/activity_login2.xml" value="0.22" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/makerenew/app/src/main/res/layout-v31/activity_splash.xml" value="0.2817028985507246" />
-        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/makerenew/app/src/main/res/layout/activity_login2.xml" value="0.25" />
-        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/makerenew/app/src/main/res/layout/activity_main.xml" value="0.2" />
-        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/makerenew/app/src/main/res/layout/activity_signin.xml" value="0.22" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/makerenew/app/src/main/res/layout-v31/list_item.xml" value="0.1096311475409836" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/makerenew/app/src/main/res/layout/activity_fitness.xml" value="0.153515625" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/makerenew/app/src/main/res/layout/activity_glucose.xml" value="0.2" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/makerenew/app/src/main/res/layout/activity_login2.xml" value="0.18" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/makerenew/app/src/main/res/layout/activity_main.xml" value="0.13" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/makerenew/app/src/main/res/layout/activity_main2.xml" value="0.1600877192982456" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/makerenew/app/src/main/res/layout/activity_signin.xml" value="0.16" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/makerenew/app/src/main/res/layout/activity_splash.xml" value="0.2" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/makerenew/app/src/main/res/layout/array.xml" value="0.2375" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/makerenew/app/src/main/res/layout/food_layout.xml" value="0.153515625" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/makerenew/app/src/main/res/layout/item.xml" value="0.1453125" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/makerenew/app/src/main/res/layout/personalInfo.xml" value="0.1" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/makerenew/app/src/main/res/layout/scan_activity.xml" value="0.153515625" />
       </map>
     </option>
   </component>
@@ -18,5 +33,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.1096311475409836" />
+      </ProjectState>
+    </option>
   </component>
 </project>

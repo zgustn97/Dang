@@ -1,4 +1,115 @@
 <resources>
-    <string name="app_name">makerenew</string>
-    <string name="sign_up">Sign-up</string>
+
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="app_name">week2</string>
+
+    <string name="max_kcal">14000</string>
+
+    <string name="total_kcal">10000</string>
+
+    <string name="total_district1">1</string>
+
+    <string name="total_district2">2</string>
+
+    <string name="total_district3">3</string>
+
+    <string name="total_district4">4</string>
+
+    <string name="total_district5">5</string>
+
+    <string name="total_district6">6</string>
+
+    <string name="mor_tan">0</string>
+
+    <string name="mor_dan">0</string>
+
+    <string name="mor_ge">0</string>
+
+    <string name="mor_cal">0</string>
+
+    <string name="mor_food1">mor_food1</string>
+
+    <string name="mor_food2">mor_food2</string>
+
+    <string name="mor_food3">mor_food3</string>
+
+    <string name="mor_food4">mor_food4</string>
+
+    <string name="mor_food5">mor_food5</string>
+
+    <string name="mor_district1">mor_district1</string>
+
+    <string name="mor_district2">mor_district2</string>
+
+    <string name="mor_district3">mor_district3</string>
+
+    <string name="mor_district4">mor_district4</string>
+
+    <string name="mor_district5">mor_district5</string>
+
+    <string name="mor_district6">mor_district6</string>
+
+    <string name="lun_tan">0</string>
+
+    <string name="lun_dan">0</string>
+
+    <string name="lun_ge">0</string>
+
+    <string name="lun_cal">0</string>
+
+    <string name="lun_food1">lun_food1</string>
+
+    <string name="lun_food2">lun_food2</string>
+
+    <string name="lun_food3">lun_food3</string>
+
+    <string name="lun_food4">lun_food4</string>
+
+    <string name="lun_food5">lun_food5</string>
+
+    <string name="lun_district1">lun_district1</string>
+
+    <string name="lun_district2">lun_district2</string>
+
+    <string name="lun_district3">lun_district3</string>
+
+    <string name="lun_district4">lun_district4</string>
+
+    <string name="lun_district5">lun_district5</string>
+
+    <string name="lun_district6">lun_district6</string>
+
+    <string name="din_tan">0</string>
+
+    <string name="din_dan">0</string>
+
+    <string name="din_ge">0</string>
+
+    <string name="din_cal">0</string>
+
+    <string name="din_food1">din_food1</string>
+
+    <string name="din_food2">din_food2</string>
+
+    <string name="din_food3">din_food3</string>
+
+    <string name="din_food4">din_food4</string>
+
+    <string name="din_food5">din_food5</string>
+
+    <string name="din_district1">din_district1</string>
+
+    <string name="din_district2">din_district2</string>
+
+    <string name="din_district3">din_district3</string>
+
+    <string name="din_district4">din_district4</string>
+
+    <string name="din_district5">din_district5</string>
+
+    <string name="din_district6">din_district6</string>
+
 </resources>

@@ -6,13 +6,261 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <GridLayout
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:columnCount="2">
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:layout_marginLeft="0dp"
+                android:backgroundTint="@color/white"
+                android:drawableTop="@drawable/arrow2"
+                android:scaleType="fitCenter" />
+
+
+            <TextView
+                android:id="@+id/shearch"
+                android:layout_marginLeft="0dp"
+                android:layout_width="wrap_content"
+                android:layout_height="68dp"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_gravity="bottom"
+                android:backgroundTint="@color/white"
+                android:text="검색"
+                android:textColor="@color/black"
+                android:textSize="38dp"
+                android:textStyle="bold" />
+
+        </GridLayout>
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#AFC6E9"
+            android:completionThreshold="1"
+            android:hint="음식을 검색하세요"
+            android:iconifiedByDefault="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></AutoCompleteTextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_gravity="bottom"
+            android:backgroundTint="@color/white"
+            android:text="추천음식"
+            android:textColor="@color/black"
+            android:textSize="30dp" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:columnCount="3"
+            android:rowCount="2">
+
+            <Button
+                android:id="@+id/RF1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:backgroundTint="#AFC6E9"
+                android:text="공깃밥"
+                android:textColor="#6C6C6C" />
+
+            <Button
+                android:id="@+id/RF2"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_columnSpan="1"
+                android:layout_gravity="center"
+                android:layout_marginRight="15dp"
+                android:backgroundTint="#AFC6E9"
+                android:text="배추김치"
+                android:textColor="#6C6C6C" />
+
+            <Button
+                android:id="@+id/RF3"
+                android:layout_row="0"
+                android:layout_column="2"
+                android:layout_gravity="center"
+                android:layout_marginRight="15dp"
+                android:backgroundTint="#AFC6E9"
+                android:text="계란후라이"
+                android:textColor="#6C6C6C" />
+
+            <Button
+                android:id="@+id/RF4"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:backgroundTint="#AFC6E9"
+                android:text="쇠고기 뭇국"
+                android:textColor="#6C6C6C" />
+
+            <Button
+                android:id="@+id/RF5"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:layout_gravity="center"
+                android:layout_marginRight="15dp"
+                android:backgroundTint="#AFC6E9"
+                android:text="미역국"
+                android:textColor="#6C6C6C" />
+
+            <Button
+                android:id="@+id/RF6"
+                android:layout_row="1"
+                android:layout_column="2"
+                android:layout_gravity="center"
+                android:layout_marginRight="15dp"
+                android:backgroundTint="#AFC6E9"
+                android:text="메추리알 장조림"
+                android:textColor="#6C6C6C" />
+
+        </GridLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <GridLayout
+            android:background="#E9EFFF"
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:layout_gravity="bottom"
+            android:columnCount="2"
+            android:rowCount="3"
+            >
+            <Button
+                android:id="@+id/CF1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:backgroundTint="#AFC6E9"
+                android:drawableRight="@drawable/ic_outline_close_24"
+                android:text="공깃밥"
+                android:textColor="#6C6C6C" />
+
+            <Button
+                android:id="@+id/CF2"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_columnSpan="1"
+                android:layout_gravity="center"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="#AFC6E9"
+                android:drawableRight="@drawable/ic_outline_close_24"
+                android:text="배추김치"
+                android:textColor="#6C6C6C" />
+
+            <Button
+                android:id="@+id/CF3"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="#AFC6E9"
+                android:drawableRight="@drawable/ic_outline_close_24"
+                android:text="계란후라이"
+                android:textColor="#6C6C6C" />
+
+            <Button
+                android:id="@+id/CF4"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:layout_gravity="center"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="#AFC6E9"
+                android:drawableRight="@drawable/ic_outline_close_24"
+                android:text="쇠고기 뭇국"
+                android:textColor="#6C6C6C" />
+
+            <Button
+                android:id="@+id/CF5"
+                android:layout_row="2"
+                android:layout_column="0"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="70dp"
+                android:backgroundTint="#AFC6E9"
+                android:drawableRight="@drawable/ic_outline_close_24"
+                android:text="미역국"
+                android:textColor="#6C6C6C" />
+
+            <Button
+                android:id="@+id/CF6"
+                android:layout_row="2"
+                android:layout_column="1"
+                android:layout_gravity="center"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="70dp"
+                android:backgroundTint="#AFC6E9"
+                android:drawableRight="@drawable/ic_outline_close_24"
+                android:text="메추리알 장조림"
+                android:textColor="#6C6C6C" />
+
+        </GridLayout>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout2">
+
+        <Button
+            android:id="@+id/daum"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/white"
+            android:text="다음"
+            android:textColor="@color/black"
+            android:textSize="38dp" />
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
