@@ -6,12 +6,13 @@
 
     <!-- 아침 -->
     <TextView
+        android:id="@+id/time"
+        android:text="-"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/item_distance"
         android:background="@color/purple_200"
         android:textColor="@color/white"
-        android:text="아침"
         android:textSize="@dimen/sub_font_size" />
 
     <LinearLayout
