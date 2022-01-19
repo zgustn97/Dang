@@ -22,9 +22,10 @@
 
                 <ImageView
                     android:id="@+id/img_toolbar"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:srcCompat="@drawable/ic_rectangle_7"
+                    android:scaleType="fitXY"
                     tools:ignore="MissingConstraints" />
 
                 <ImageButton
