@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Makerenew">
         <activity
+            android:name=".FoodValueActivity"
+            android:exported="false" />
+        <activity
             android:name=".glucose_plus"
             android:exported="false" />
         <activity

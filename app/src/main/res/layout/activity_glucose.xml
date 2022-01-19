@@ -27,7 +27,7 @@
                     app:srcCompat="@drawable/ic_rectangle_7" />
 
                 <ImageButton
-                    android:id="@+id/imageButton"
+                    android:id="@+id/backButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -43,11 +43,11 @@
                     android:id="@+id/imageView8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toBottomOf="@+id/imageButton"
+                    app:layout_constraintBottom_toBottomOf="@+id/backButton"
                     app:layout_constraintEnd_toEndOf="@+id/img_toolbar"
                     app:layout_constraintHorizontal_bias="0.065"
-                    app:layout_constraintStart_toEndOf="@+id/imageButton"
-                    app:layout_constraintTop_toTopOf="@+id/imageButton"
+                    app:layout_constraintStart_toEndOf="@+id/backButton"
+                    app:layout_constraintTop_toTopOf="@+id/backButton"
                     app:layout_constraintVertical_bias="0.571"
                     app:srcCompat="@drawable/ic___glu" />
 

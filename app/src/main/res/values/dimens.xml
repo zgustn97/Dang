@@ -4,18 +4,11 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
 
     <!-- Font Size -->
-
-
-    <dimen name="high_font_size">36dp</dimen>
-
-    <dimen name="nor_font_size">20dp</dimen>
-
-    <dimen name="sub_font_size">18dp</dimen>
+    <dimen name="high_font_size">36sp</dimen>
+    <dimen name="nor_font_size">20sp</dimen>
+    <dimen name="sub_font_size">18sp</dimen>
 
     <!-- Layout Size -->
-
-
-    <dimen name="item_distance">25dp</dimen>
-
-    <dimen name="in_item_distance">10dp</dimen>
+    <dimen name="item_distance">25sp</dimen>
+    <dimen name="in_item_distance">10sp</dimen>
 </resources>
