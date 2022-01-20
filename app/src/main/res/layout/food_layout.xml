@@ -6,7 +6,7 @@
 
     <!-- 아침 -->
     <TextView
-        android:id="@+id/time"
+        android:id="@+id/classification"
         android:text="-"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

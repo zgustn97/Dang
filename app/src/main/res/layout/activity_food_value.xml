@@ -6,14 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".FoodValueActivity">
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="-141dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <!-- 바 [S] -->
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -24,8 +27,8 @@
                     android:id="@+id/img_toolbar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/ic_rectangle_7"
                     android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_rectangle_7"
                     tools:ignore="MissingConstraints" />
 
                 <ImageButton
@@ -79,9 +82,9 @@
 
                 <TextView
                     android:id="@+id/total_food_cal"
-                    android:text="0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="0"
                     android:textSize="@dimen/high_font_size" />
 
                 <TextView
@@ -92,9 +95,9 @@
 
                 <TextView
                     android:id="@+id/max_food_cal"
-                    android:text="14000"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="14000"
                     android:textSize="@dimen/nor_font_size" />
 
                 <TextView
@@ -133,9 +136,9 @@
 
                 <TextView
                     android:id="@+id/total_district1"
-                    android:text="0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="0"
                     android:textSize="@dimen/sub_font_size" />
 
                 <TextView
@@ -152,9 +155,9 @@
 
                 <TextView
                     android:id="@+id/total_district2"
-                    android:text="0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="0"
                     android:textSize="@dimen/sub_font_size" />
 
                 <TextView
@@ -171,9 +174,9 @@
 
                 <TextView
                     android:id="@+id/total_district3"
-                    android:text="0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="0"
                     android:textSize="@dimen/sub_font_size" />
 
                 <TextView
@@ -196,9 +199,9 @@
 
                 <TextView
                     android:id="@+id/total_district4"
-                    android:text="0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="0"
                     android:textSize="@dimen/sub_font_size" />
 
                 <TextView
@@ -215,9 +218,9 @@
 
                 <TextView
                     android:id="@+id/total_district5"
-                    android:text="0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="0"
                     android:textSize="@dimen/sub_font_size" />
 
                 <TextView
@@ -234,16 +237,25 @@
 
                 <TextView
                     android:id="@+id/total_district6"
-                    android:text="0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="0"
                     android:textSize="@dimen/sub_font_size" />
+
             </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                />
+
             <!-- total district [E] -->
 
 
         </LinearLayout>
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
