@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PrivacyHealthActivity">
+
+
+    <ScrollView
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#E5E5E5"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            >
+
+            <Button
+                android:id="@+id/enter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:backgroundTint="#E5E5E5"
+                android:text="입력"
+                android:textSize="25dp"
+                android:textColor="#6C6C6C"
+
+                />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="개인 건강 정보"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="214dp"
+                android:layout_height="5dp"
+                android:layout_marginStart="105dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="105dp"
+                android:background="#838383"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="46px"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:text="몸무게" />
+
+            <EditText
+                android:id="@+id/weight"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="24px"
+                android:background="#FFFFFF"
+                android:hint=" 60.0kg "
+                android:inputType="number"
+                android:textSize="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="66px"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:text="키" />
+
+            <EditText
+                android:id="@+id/height"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="4px"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="#FFFFFF"
+                android:hint=" 170.0cm "
+                android:inputType="number"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="46px"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:text="당뇨병유형 선택" />
+
+            <Spinner
+                android:id="@+id/당뇨유형"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="29px"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="#FFFFFF"
+                android:entries="@array/array1"
+                android:textSize="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="46px"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:text="혈당강화제" />
+
+            <Spinner
+                android:id="@+id/혈당강화제"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="29px"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:entries="@array/array2"
+                android:background="#FFFFFF"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="46px"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:text="인슐린" />
+
+            <Spinner
+                android:id="@+id/인슐린"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="29px"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="#FFFFFF"
+                android:entries="@array/array3"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="66px"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:text="처방약" />
+
+            <EditText
+                android:id="@+id/처방약"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="4px"
+                android:background="#FFFFFF"
+                android:hint=" 이름,용량"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="46px"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:text="GLP-1 주사" />
+
+            <Spinner
+                android:id="@+id/GLP"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="29px"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:entries="@array/array4"
+                android:background="#FFFFFF"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="46px"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:text="목표혈당" />
+            <GridLayout
+                android:layout_width="fill_parent"
+                android:layout_height="80dp"
+                android:columnCount="3">
+
+                <TextView
+
+                    android:layout_width="134dp"
+                    android:layout_height="105dp"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_gravity="center_horizontal"
+                    android:text="  ~"
+                    android:textSize="80dp" />
+
+                <EditText
+                    android:id="@+id/목표혈당"
+                    android:layout_column="0"
+                    android:layout_gravity="left|center"
+                    android:layout_row="0"
+                    android:layout_width="104dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="30dp"
+                    android:background="#FFFFFF"
+                    android:inputType="number"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/목표혈당2"
+                    android:layout_column="2"
+                    android:layout_gravity="left|center"
+                    android:layout_row="0"
+                    android:layout_width="104dp"
+                    android:layout_height="45dp"
+                    android:background="#FFFFFF"
+                    android:inputType="number"
+                    android:layout_marginRight="30dp"
+                    android:textSize="20dp" />
+            </GridLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="46px"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:text="평소 식사량" />
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="24px"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rgBtn1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="적음"
+                    android:textSize="20dp"/>
+
+                <RadioButton
+                    android:id="@+id/rgBtn2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="보통"
+                    android:textSize="20dp"/>
+
+                <RadioButton
+                    android:id="@+id/rgBtn3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="많음"
+                    android:textSize="20dp"/>
+            </RadioGroup>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="46px"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:text="평소 운동량" />
+            <RadioGroup
+                android:id="@+id/radioGroup2"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="24px"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rgBtn2_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="적음"
+                    android:textSize="20dp"/>
+
+                <RadioButton
+                    android:id="@+id/rgBtn2_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="보통"
+                    android:textSize="20dp"/>
+
+                <RadioButton
+                    android:id="@+id/rgBtn2_3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="많음"
+                    android:textSize="20dp"/>
+            </RadioGroup>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

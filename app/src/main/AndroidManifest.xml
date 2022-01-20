@@ -16,6 +16,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Makerenew">
         <activity
+            android:name=".PrivacyHealthActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PrivacyActivity"
+            android:exported="false" />
+        <activity
             android:name=".FoodSelectActivity"
             android:exported="false" />
         <activity

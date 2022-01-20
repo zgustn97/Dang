@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <resources>
+        <string-array name="array1">
+            <item> 제2형 당뇨병</item>
+            <item> 제1형 당뇨병</item>
+            <item> 임신형 당뇨병</item>
+            <item> 당뇨병 전단계</item>
+            <item> 당뇨병 아님</item>
+        </string-array>
+        <string-array name="array2">
+            <item> 디아미크롱 80mg</item>
+            <item> 다오닐 5mg</item>
+            <item> 글루레노름 30mg</item>
+            <item> 다이그린 5mg</item>
+            <item> 아미릴 2mg</item>
+            <item> 직접입력 (이름 - 용량)</item>
+        </string-array>
+        <string-array name="array3">
+            <item> 1</item>
+            <item> 2</item>
+            <item> 3</item>
+            <item> 4</item>
+            <item> 5</item>
+        </string-array>
+        <string-array name="array4">
+            <item> 1</item>
+            <item> 2</item>
+            <item> 3</item>
+            <item> 4</item>
+            <item> 5</item>
+        </string-array>
+    </resources>
