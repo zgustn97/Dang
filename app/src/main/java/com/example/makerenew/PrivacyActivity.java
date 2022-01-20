@@ -1,5 +1,6 @@
 package com.example.makerenew;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -23,8 +24,6 @@ public class PrivacyActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
-        Button next = (Button) findViewById(R.id.next);
-
         EditText nameText = (EditText)findViewById(R.id.nameText);
         EditText nicknameText = (EditText)findViewById(R.id.nicknameText);
         EditText birthText = (EditText)findViewById(R.id.birthText);
@@ -39,6 +38,15 @@ public class PrivacyActivity extends AppCompatActivity {
                 P = phoneText.getText().toString();
             }
         };
-        next.setOnClickListener(listener);
+
+        // PrivacyHealthActivity 로 이동
+        Button next = findViewById(R.id.next);
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), PrivacyHealthActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

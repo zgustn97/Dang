@@ -1,4 +1,4 @@
-package com.cookandroid.pr_food_ver2;
+package com.example.makerenew;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -39,7 +39,7 @@ public class FoodSelectActivity extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_food_select);
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();

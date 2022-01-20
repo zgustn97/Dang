@@ -3,23 +3,13 @@ package com.example.makerenew;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.graphics.Color;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
-import android.widget.MultiAutoCompleteTextView;
-import android.widget.MultiAutoCompleteTextView.CommaTokenizer;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
-import android.widget.TextView;
-import android.widget.Toast;
 
 
 public class PrivacyHealthActivity extends AppCompatActivity {
@@ -42,8 +32,6 @@ public class PrivacyHealthActivity extends AppCompatActivity {
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
-
-        Button enter = (Button) findViewById(R.id.enter);
 
         EditText weight = (EditText)findViewById(R.id.weight);
         EditText height = (EditText)findViewById(R.id.height);
@@ -74,7 +62,17 @@ public class PrivacyHealthActivity extends AppCompatActivity {
 
             }
         };
-        enter.setOnClickListener(listener);
+
+        // 입력 버튼 클릭 시 이동
+        Button next = findViewById(R.id.next);
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), PrivacyHealthActivity.class); // 클래스 변경 필요 @@@@@@@@@@@@@
+                startActivity(intent);
+            }
+        });
+
 
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() { // 식사량
             @Override
