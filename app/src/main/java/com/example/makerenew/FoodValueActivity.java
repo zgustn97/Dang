@@ -69,11 +69,13 @@ public class FoodValueActivity extends AppCompatActivity {
         Food snack = adapter.getItem(3);
 
         // 각 변수에 값 입력 이런식으로 사용하시면 됩니다 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+        // 최초 DB의 값을 부르는 위치
+        // ----- 각 시간대별 데이터 영역 ------
         morning.setMeal_cal(1000);
 
         recyclerView.setAdapter(adapter);
 
-        // 최초 DB의 값을 부르는 위치
+        // ----- total 영역 ------
         totalCal = 5000;
         maxCal = 14000;
 
